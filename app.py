@@ -1,10 +1,5 @@
-from flask import Flask
-
-app = Flask(__name__)
-
 @app.route('/')
 def home():
-    return "<h1>Success!</h1><p>My Python website is running.</p>"
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=5000)
+    # If this line still says return "My Python website is running", 
+    # it will always stay blank. It MUST use render_template.
+    return render_template('index.html')
