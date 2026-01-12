@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    
-    <title>My Python Site</title>
+    <title>My Personal Portfolio</title>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Deployment Success! 🚀</h1>
-        <p>Your Flask app is now running with a real HTML template.</p>
-        <a href="#" class="button">Learn More</a>
-    </div>
+    <nav class="navbar">
+        <div class="logo">MyBrand</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Hi, I'm a Python Developer 🐍</h1>
+            <p>Welcome to my first Flask website deployed on Render.</p>
+            <a href="#about" class="button">Explore My Work</a>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About This Project</h2>
+            <p>I built this site using Python and Flask. It is currently hosted live on the web!</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 My Python Site</p>
+    </footer>
 
 </body>
 </html>
