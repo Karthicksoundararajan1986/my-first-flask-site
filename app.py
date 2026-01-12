@@ -1,11 +1,10 @@
-from flask import Flask, render_template  # 1. ADDED RENDER_TEMPLATE HERE
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    # 2. THIS TELLS FLASK TO LOOK FOR index.html IN THE templates FOLDER
-    return render_template('index.html')
+    return "<h1>Success!</h1><p>My Python website is running.</p>"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
