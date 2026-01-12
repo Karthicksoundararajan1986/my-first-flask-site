@@ -1,7 +1,10 @@
-from flask import Flask, render_template # Must include render_template
+from flask import Flask
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('index.html') # This links to your HTML file
+    return "<h1>Success!</h1><p>My Python website is running.</p>"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000)

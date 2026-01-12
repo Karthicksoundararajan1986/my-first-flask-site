@@ -1,40 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>My Personal Portfolio</title>
-</head>
-<body>
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
-    <nav class="navbar">
-        <div class="logo">MyBrand</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
 
-    <header class="hero">
-        <div class="container">
-            <h1>Hi, I'm a Python Developer 🐍</h1>
-            <p>Welcome to my first Flask website deployed on Render.</p>
-            <a href="#about" class="button">Explore My Work</a>
-        </div>
-    </header>
+/* Navbar */
+.navbar {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2>About This Project</h2>
-            <p>I built this site using Python and Flask. It is currently hosted live on the web!</p>
-        </div>
-    </section>
+.nav-links {
+    list-style: none;
+    display: flex;
+}
 
-    <footer class="footer">
-        <p>&copy; 2026 My Python Site</p>
-    </footer>
+.nav-links li {
+    padding: 0 15px;
+}
 
-</body>
-</html>
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: #3498db;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background: #e67e22;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #d35400;
+}
+
+/* Sections */
+.about-section {
+    padding: 50px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+}
